@@ -1,0 +1,93 @@
+body {
+  background-color: #fffaf0;
+  font-family: "Inconsolata", monospace;
+  padding-top: 75px;
+}
+
+.container {
+  max-width: 550px;
+  background-color: #fff;
+  margin: auto;
+  -webkit-box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+  box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+}
+.title {
+  background: rgb(63, 94, 251);
+  background: radial-gradient(
+    circle,
+    rgb(16, 18, 29) 0%,
+    rgb(0, 140, 105) 100%
+  );
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: rgb(0, 196, 121);
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  border-radius: 10px 10px 0 0;
+}
+.city-search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.search-btn {
+  background-color: rgb(0, 140, 105);
+  padding: 10px;
+  border: transparent;
+  font-size: medium;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: "Poppins", "sans-serif";
+  height: 50px;
+}
+
+.search-btn:hover {
+  background-color: #2ebf91;
+}
+.input {
+  height: 50px;
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid rgb(189, 184, 184);
+}
+
+.input:focus {
+  outline: 1px solid rgb(204, 199, 199);
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.content span {
+  margin: 5px 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: larger;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+.notification {
+  display: flex;
+  padding-left: 1em;
+  padding-bottom: 1rem;
+  font-size: large;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}

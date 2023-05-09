@@ -1,0 +1,54 @@
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <!--    link our css file to html-->
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Weather Forecast</h1>
+      <div class="columns">
+        <form method="POST">
+          {% csrf_token %}
+          <div class="city-search">
+            <input
+              class="input"
+              type="text"
+              placeholder="City Name"
+              name="name"
+            />
+            <button class="search-btn">Search City</button>
+          </div>
+        </form>
+        <div class="columns">
+          {% for weather in weather_data %}
+          <div class="box">
+            <div class="content">
+              <img
+                src="http://openweathermap.org/img/w/{{ weather.icon }}.png"
+                alt="Image"
+              />
+              <span class="city-title">{{ weather.city }}</span>
+              <span class="subtitle">{{ weather.temperature }}</span>
+              <span class="">{{weather.description}}</span>
+              <span class="">{{weather.wind}}</span>
+              <span class="">{{weather.humidity}}</span>
+              <span class="">{{weather.time}}</span>
+            </div>
+          </div>
+          {% endfor %} {% if messages %}
+          <div class="notification">
+            {% for message in messages %}
+            <p>{{ message }}</p>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
